@@ -1,6 +1,6 @@
 # 三年级数学练习题生成器
 
-一款面向小学三年级学生的数学练习题生成器，支持随机出题和 PDF 导出。
+一款面向小学三年级学生的数学练习题生成器，支持随机出题、PDF 导出和参考答案生成。
 
 ![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
 ![wxPython](https://img.shields.io/badge/wxPython-4.0+-green.svg)
@@ -12,6 +12,7 @@
 - **随机组卷**，每次生成题目不同
 - **实时预览**，直接查看生成的试卷
 - **PDF 导出**，支持中文显示
+- **参考答案**，PDF 最后一页自动生成标准答案
 - **批量生成**，可一次生成多份不同的练习卷
 - **跨平台**，支持 Windows、macOS、Linux
 
@@ -41,11 +42,11 @@ python main.py
 ## 项目结构
 
 ```
-mathapp/
+math/
 ├── main.py                  # 程序入口（wxPython GUI）
-├── question_generator.py    # 题目生成逻辑
-├── pdf_generator.py         # PDF 生成（基于 ReportLab）
-├── icon.png                 # 应用图标
+├── question_generator.py     # 题目和答案生成逻辑
+├── pdf_generator.py          # PDF 生成（基于 ReportLab）
+├── icon.ico                  # 应用图标
 └── README.md
 ```
 
@@ -57,7 +58,7 @@ mathapp/
    - 随机：随机选择 N 个题型（可设置 N）
 3. **生成试卷**：
    - **预览**：生成临时 PDF 并直接打开查看
-   - **生成练习题**：选择保存路径，导出 PDF 文件
+   - **生成练习题**：选择保存路径，导出 PDF 文件（包含参考答案）
    - **批量保存**：输入数量，在 `output/` 文件夹生成多份不同试卷
 
 ## License
