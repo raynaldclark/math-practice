@@ -28,15 +28,18 @@
 
 ## 运行方式
 
-### 直接运行 EXE（Windows）
-
-下载 `dist/三年级数学练习.exe`，直接双击运行，无需安装任何依赖。
-
 ### 源码运行
 
 ```bash
 pip install wxPython reportlab
 python main.py
+```
+
+### 打包 EXE
+
+```bash
+pip install pyinstaller
+pyinstaller --onefile --windowed --icon=icon.ico main.py
 ```
 
 ## 项目结构
